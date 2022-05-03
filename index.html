@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Space Battle</title>
+</head>
+<body>
+    <h2 class="title">Space Battle</h2>
+    <div class="battlefield uniform-width uniform-center">
+        <div class="ship-area-player">
+            <div class="player-ship" onanimationend="onAnimationCompleted(this)"></div>
+        </div>
+        <div class="ship-area-aliens">
+            <div class="alien-ship" onanimationend="onAnimationCompleted(this)"></div>
+            <div class="alien-ship" onanimationend="onAnimationCompleted(this)"></div>
+            <div class="alien-ship" onanimationend="onAnimationCompleted(this)"></div>
+            <div class="alien-ship" onanimationend="onAnimationCompleted(this)"></div>
+            <div class="alien-ship" onanimationend="onAnimationCompleted(this)"></div>
+            <div class="alien-ship" onanimationend="onAnimationCompleted(this)"></div>
+        </div>
+    </div>
+
+    <div class="console uniform-width uniform-center">
+        <div class="player-stats"></div>
+        <div class="current-actions">
+        </div>
+    </div>
+    <div class="controls  uniform-width uniform-center">
+        <button id="attack-btn" class="action-btn" onclick="onPlayerAttack()">Attack</button>
+        <button id="retreat-btn" class="action-btn" onclick="onRetreat()">Retreat</button>
+    </div>
+    <div class="legend uniform-width uniform-center">
+        <p id="player-score" class="score">USS Assembly: <span>0</span></p>
+        <hr>
+        <p id="aliens-score" class="score">Aliens: <span>0</span></p>
+    </div>
+
+    <script src="spacebattle.js"></script>
+</body>
+</html>

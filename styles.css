@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'copperplate gothic';
+}
+
+body {
+    box-shadow:
+        inset 0 0 50px rgb(7, 230, 238),
+        /* inner white */
+        inset 20px 0 80px rgb(109, 16, 109),
+        /* inner left magenta short */
+        inset -20px 0 80px #0ff,
+        /* inner right cyan short */
+        inset 20px 0 300px rgb(3, 13, 158),
+        /* inner left magenta broad */
+        inset -20px 0 300px rgb(187, 5, 126),
+        /* inner right cyan broad */
+        0 0 50px rgb(252, 76, 185),
+        /* outer white */
+        -10px 0 80px rgb(129, 4, 129),
+        /* outer left magenta */
+        10px 0 80px #0ff;
+    /* outer right cyan */
+
+}
+
+
+.title {
+    padding: 1rem;
+    text-align: center;
+    color: purple;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: bold;
+    background: #66ff66;
+    background: -moz-linear-gradient(top, #66ff66 0%, #aaffaa 70%, #66ff66 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66ff66), color-stop(70%, #aaffaa), color-stop(100%, #66ff66));
+    background: -webkit-linear-gradient(top, #66ff66 0%, #aaffaa 70%, #66ff66 100%);
+    background: -o-linear-gradient(top, #66ff66 0%, #aaffaa 70%, #66ff66 100%);
+    background: -ms-linear-gradient(top, #66ff66 0%, #aaffaa 70%, #66ff66 100%);
+    background: linear-gradient(to bottom, #66ff66 0%, #aaffaa 70%, #66ff66 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66ff66', endColorstr='#66ff66', GradientType=0);
+}
+
+.button3:hover {
+    color: #000;
+    background: #44ee44;
+    background: -moz-linear-gradient(top, #44ee44 0%, #aaffaa 70%, #44ee44 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #44ee44), color-stop(70%, #aaffaa), color-stop(100%, #44ee44));
+    background: -webkit-linear-gradient(top, #44ee44 0%, #aaffaa 70%, #44ee44 100%);
+    background: -o-linear-gradient(top, #44ee44 0%, #aaffaa 70%, #44ee44 100%);
+    background: -ms-linear-gradient(top, #44ee44 0%, #aaffaa 70%, #44ee44 100%);
+    background: linear-gradient(to bottom, #44ee44 0%, #aaffaa 70%, #44ee44 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#44ee44', endColorstr='#44ee44', GradientType=0);
+}
+}
+
+.uniform-width {
+    max-width: 50vw;
+}
+
+.uniform-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.display-none {
+    display: none;
+}
+
+.battlefield {
+    display: flex;
+    max-width: 50vw;
+    height: 52vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    justify-content: space-between;
+
+    background-image: url(https://media.giphy.com/media/3ov9k1173PdfJWRsoE/giphy.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border: 1px solid #31326e;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #3e3f97;
+
+    overflow: hidden;
+}
+
+.ship-area-player {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 90%;
+    width: 12vw;
+    margin: 0 1rem;
+    /* border: 2px solid green; */
+}
+
+.ship-area-aliens {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 90%;
+    width: 12vw;
+    margin: 0 1rem;
+    /* border: 2px solid red; */
+}
+
+.health-bar {
+    position: relative;
+    width: var(--ship-health);
+    height: 2px;
+
+    background-color: green;
+}
+
+.uss-hello-world') {
+    background-image: url(https://media.giphy.com/media/xs7ehQ7uKOxzD3P0Ex/giphy.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.player-ship-attack-animation {
+    animation: player-attack 1000ms;
+}
+
+.player-ship-retreat-animation {
+    animation: player-retreat 2500ms forwards;
+}
+
+.player-ship-leave-animation {
+    animation: player-leave 2500ms forwards;
+}
+
+.player-ship-destroyed-animation {
+    animation: player-ship-destroyed 2000ms forwards;
+}
+
+.alien-ship {
+    background-image: url(https://media.giphy.com/media/Wq8uLfaRhlN7piaZJ2/giphy.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    width: 134px;
+    height: 64px;
+}
+
+.alien-stats {
+    position: relative;
+    min-width: 2rem;
+    min-height: 3rem;
+    border-radius: 5%;
+
+    /* background-color: #278b45; */
+    box-shadow: 0 0 8px #0ff;
+    border: 1px solid #0ff;
+
+    right: -100%;
+    /* background-color: white; */
+}
+
+.destroyed {
+    background-image: url(https://media.giphy.com/media/l0Iycd0UkyHOe4qT6/giphy.gif);
+}
+
+.alien-stats p {
+    padding: 0.2rem;
+    color: rgb(248, 42, 128);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.alien-ship-attack-animation {
+    animation: alien-attack 1000ms;
+}
+
+.explosion {
+    display: none;
+    position: absolute;
+    min-width: 64px;
+    min-height: 64px;
+    top: 0;
+
+    background-image: url(https://media.giphy.com/media/l0Iycd0UkyHOe4qT6/giphy.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.impact {
+    position: absolute;
+    min-width: 16px;
+    min-height: 16px;
+
+    background-image: url(https://media.giphy.com/media/l0Iycd0UkyHOe4qT6/giphy.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes alien-attack {
+    0% {
+        right: 0;
+    }
+
+    50% {
+        right: 30vw;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes player-attack {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 30vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes player-retreat {
+    0% {
+        transform: rotateZ(0deg);
+        left: 0vw;
+    }
+
+    25% {
+        left: 8vw;
+        transform: rotateZ(180deg);
+    }
+
+    100% {
+        transform: rotateZ(180deg);
+        left: -25vw;
+    }
+}
+
+@keyframes player-leave {
+    0% {
+        left: 0vw;
+    }
+
+    25% {
+        left: -2vw;
+    }
+
+    100% {
+        left: 65vw;
+    }
+}
+
+@keyframes player-ship-destroyed {
+    0% {
+        right: 0;
+        transform:
+            rotateZ(0deg) scale(1);
+    }
+
+    100% {
+        right: 5vw;
+        transform:
+            rotateZ(720deg) scale(0);
+    }
+}
+
+h2 {
+    color: rgb(221, 8, 150);
+    margin: 1rem;
+}
+
+.console {
+    display: flex;
+    max-height: 8rem;
+    padding: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border: 1px solid #31326e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #3e40979d;
+}
+
+.console>* {
+    min-width: 50%;
+}
+
+.player-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border-radius: 5%;
+}
+
+.player-stats>* {
+    color: rgb(221, 8, 150);
+    margin: 0.125rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.current-actions {
+    display: flex;
+    /* max-height: 6rem; */
+    flex-direction: column;
+    overflow: auto;
+}
+
+.current-actions p {
+    color: rgb(221, 8, 150);
+    font-size: 12px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.action-btn {
+    cursor: pointer;
+    background: none;
+    border: 1px solid transparent;
+
+    margin: 0.5rem;
+    padding: 1rem;
+
+    color: rgb(221, 8, 150);
+    box-shadow: 0px 0px 8px #3e40979d;
+}
+
+.action-btn:hover {
+    transition: 300ms;
+    border-radius: 8%;
+    border: 1px solid #3e4097;
+    box-shadow: 0px 0px 12px #3b3eff;
+}
+
+.action-btn:disabled {
+    cursor: default;
+    border-radius: 8%;
+    border: 1px solid #ff0000;
+    box-shadow: 0px 0px 8px #ff0000;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50vw;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.legend .score {
+    text-align: center;
+    min-width: 16rem;
+    min-height: 2rem;
+    padding: 1rem;
+    margin: auto;
+
+    border: 1px solid #31326e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #3e40979d;
+
+    color: rgb(221, 8, 150);
+    font-weight: bold;
+    font-size: 21px;
+}
